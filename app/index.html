@@ -66,6 +66,25 @@
           <div class="bottom bottom-container center horizontal layout">
             <div class="bottom-title paper-font-subhead">The future of the web today</div>
           </div>
+          <paper-menu>
+            <paper-item>Home</paper-item>
+          </paper-menu>
+          
+          <paper-menu>
+            <paper-item>About</paper-item>
+          </paper-menu>
+
+          <paper-menu>
+            <paper-item>Team</paper-item>
+          </paper-menu>
+
+          <paper-menu>
+            <paper-item>Projects</paper-item>
+          </paper-menu>
+
+          <paper-menu>
+            <paper-item>Contact</paper-item>
+          </paper-menu>
 
         </paper-toolbar>
 
@@ -73,11 +92,19 @@
         <div class="content">
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
+            <section data-route="home">
+              <p>Hola!</p>
+            </section>
+
             <section data-route="contact">
               <paper-material elevation="1">
                 <h2 class="paper-font-display2">Contact</h2>
                 <p>This is the contact section</p>
               </paper-material>
+            </section>
+
+            <section data-route="team">
+              <profile-vcard name="Oscar Cortez" image="https://pbs.twimg.com/profile_images/482222151932456960/6-cd1FU0.jpeg" profession="Full Stack Ninja Developer" description="Write here your cool description" twitter="oscar_mcm" website="oscarmcm.com" place="Managua, Nicaragua"></profile-vcard>
             </section>
 
           </iron-pages>
