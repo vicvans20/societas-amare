@@ -69,7 +69,7 @@
           <paper-menu>
             <paper-item>Home</paper-item>
           </paper-menu>
-          
+
           <paper-menu>
             <paper-item>About</paper-item>
           </paper-menu>
@@ -92,14 +92,15 @@
         <div class="content">
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
-            <section data-route="home">
-              <p>Hola!</p>
+            <section data-route="home" id="home-section">
+              <img alt="background" src="images/wall.jpg" />
+              <div id="particle-target"></div>
+              <img alt="logo" src="http://www.storm-technologies.com/media/1189/stormlogo.png" />
             </section>
 
             <section data-route="contact">
               <paper-material elevation="1">
-                <h2 class="paper-font-display2">Contact</h2>
-                <p>This is the contact section</p>
+                <contact-element></contact-element>
               </paper-material>
             </section>
 
@@ -130,6 +131,49 @@
 
   </template>
 
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/particleground/jquery.particleground.min.js"></script>
+  <script src="bower_components/logos-distort/dist/jquery.logosDistort.min.js"></script>
+  <script>
+  var particles = true,
+    particleDensity,
+    options = {
+        effectWeight: 1,
+        outerBuffer: 1.08,
+        elementDepth: 220
+    };
+
+  $(document).ready(function() {
+    $("#js-home-section").logosDistort(options);
+
+    if (particles) {
+      particleDensity = window.outerWidth * 7.5;
+      if (particleDensity < 13000) {
+        particleDensity = 13000;
+      } else if (particleDensity > 20000) {
+        particleDensity = 20000;
+      }
+      return $('#particle-target').particleground({
+        dotColor: '#1ec5ee',
+        lineColor: '#0a4e90',
+        density: particleDensity.toFixed(0),
+        parallax: true
+      });
+    }
+
+    $(".md-input").focus(function() {
+      $(this).parent().addClass("is-active is-completed");
+    });
+
+    $(".md-input").focusout(function() {
+      if ($(this).val() === "") {
+        $(this).parent().removeClass("is-completed");
+      }
+      $(this).parent().removeClass("is-active");
+    });
+
+  });
+  </script>
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
