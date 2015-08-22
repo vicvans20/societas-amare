@@ -15,9 +15,129 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     :host {
       display: block;
     }
+    .wrap {
+      width: 250px;
+      margin: 30px auto;
+      background: #831e1e;
+      padding: 20px 32px;
+    }
+
+    .md-label {
+      display: block;
+      font-size: 14px;
+      transform: translateY(25px);
+      color: #421414;
+      transition: all 0.5s;
+      padding-left: 4px;
+    }
+
+    h2 {
+      color: #fff;
+      font-weight: 400;
+      margin: 0;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 13px;
+      margin: 4px 0 0 0;
+      padding: 0 3px;
+      color: #ddd;
+    }
+
+    .md-input {
+      position: relative;
+      background: transparent;
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 8px 0;
+      font-size: 16px;
+      color: #421414;
+      resize: none;
+    font-weight: bold;
+  }
+
+  .md-div {
+    padding: 0;
+    position: relative;
+    transition: all 0.5s;
+  }
+
+  .md-div:after,
+  .md-div:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #421414;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+  }
+
+  .md-div::after {
+    background-color: #fff;
+    transform: scaleX(0);
+  }
+  .is-active, .is-completed {
+    padding: 15px 0 0 0;
+  }
+  .is-active::after {
+    transform: scaleX(1);
+  }
+
+  .is-active .md-label {
+    color: #fff;
+  }
+
+  .is-completed .md-label {
+    font-size: 12px;
+    transform: translateY(0);
+    padding:0;
+  }
+
+  button {
+    border: none;
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin: 35px 0 0 0;
+    cursor: pointer;
+    background: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+  }
   </style>
   <template>
-    <div>Hello from <span>{{foo}}</span></div>
+    <div class="wrap">
+      <h2>Contact Us</h2>
+      <p>Fill in your details below and we'll get back to you as soon as possible.</p>
+
+      <div class="md-div">
+        <label for="first-name" class="md-label">NAME</label>
+        <input type="text" class="md-input" id="first-name">
+      </div>
+
+      <div class="md-div">
+        <label for="first-name" class="md-label">EMAIL</label>
+        <input type="text" class="md-input" id="last-name">
+      </div>
+
+      <div class="md-div">
+        <label for="address" class="md-label">SUBJECT</label>
+        <input type="text" class="md-input" id="address">
+      </div>
+
+      <div class="md-div">
+        <label for="message" class="md-label">MESSAGE</label>
+        <textarea type="text" class="md-input" id="message"></textarea>
+      </div>
+      <button>Send Message</button>
+    </div>
   </template>
   <script>
   (function() {
