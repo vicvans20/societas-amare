@@ -50,39 +50,22 @@
   <template is="dom-bind" id="app">
 
       <!-- Main Area -->
-      <paper-scroll-header-panel main condenses keep-condensed-header>
+      <paper-scroll-header-panel main>
 
-        <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" class="tall">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-          <!-- Application name -->
-          <div class="middle middle-container center horizontal layout">
-            <div class="app-name">Storm Tecnologies</div>
+        <paper-toolbar id="mainToolbar">
+
+          <div>
+            <div class="app-name">
+              <img src="http://www.storm-technologies.com/media/1189/stormlogo.png" with="60" height="60">
+            </div>
           </div>
-
-          <!-- Application sub title -->
-          <div class="bottom bottom-container center horizontal layout">
-            <div class="bottom-title paper-font-subhead">The future of the web today</div>
+          <div class="app-menu">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/team">Team</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
           </div>
-          <paper-menu>
-            <paper-item>Home</paper-item>
-          </paper-menu>
-
-          <paper-menu>
-            <paper-item>About</paper-item>
-          </paper-menu>
-
-          <paper-menu>
-            <paper-item>Team</paper-item>
-          </paper-menu>
-
-          <paper-menu>
-            <paper-item>Projects</paper-item>
-          </paper-menu>
-
-          <paper-menu>
-            <paper-item>Contact</paper-item>
-          </paper-menu>
 
         </paper-toolbar>
 
@@ -91,9 +74,7 @@
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home" id="home-section">
-              <img alt="background" src="images/wall.jpg" />
-              <div id="particle-target"></div>
-              <img alt="logo" src="http://www.storm-technologies.com/media/1189/stormlogo.png" />
+              <img alt="background" src="images/wall.jpg" width="100%" height="500px"/>
             </section>
 
             <section data-route="about">
@@ -101,6 +82,9 @@
 
             <section data-route="team">
               <profile-vcard name="Oscar Cortez" image="https://pbs.twimg.com/profile_images/482222151932456960/6-cd1FU0.jpeg" profession="Full Stack Ninja Developer" description="Write here your cool description" twitter="oscar_mcm" website="oscarmcm.com" place="Managua, Nicaragua"></profile-vcard>
+              <profile-vcard name="Victor Vanegas" image="https://pbs.twimg.com/profile_images/482222151932456960/6-cd1FU0.jpeg" profession="Full Stack Ninja Developer" description="Write here your cool description" twitter="oscar_mcm" website="oscarmcm.com" place="Managua, Nicaragua"></profile-vcard>
+              <profile-vcard name="Jonathan Guadamuz" image="https://pbs.twimg.com/profile_images/482222151932456960/6-cd1FU0.jpeg" profession="Full Stack Ninja Developer" description="Write here your cool description" twitter="oscar_mcm" website="oscarmcm.com" place="Managua, Nicaragua"></profile-vcard>
+              <profile-vcard name="Alexander Gonzalez" image="https://pbs.twimg.com/profile_images/482222151932456960/6-cd1FU0.jpeg" profession="Full Stack Ninja Developer" description="Write here your cool description" twitter="oscar_mcm" website="oscarmcm.com" place="Managua, Nicaragua"></profile-vcard>
             </section>
 
             <section data-route="projects">
