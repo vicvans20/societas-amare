@@ -1,6 +1,6 @@
 /*
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+This codemay only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
@@ -11,4 +11,95 @@ body {
   background: #fafafa;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
+}
+
+.cta-area {
+    padding: 30px 0;
+    height: 200px;
+    background-color: #1F2937;
+}
+
+.cta-offer {
+    position: relative;
+}
+
+.offer-pos {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.offer-pos {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+.offer:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 110px;
+    content: "";
+    z-index: 8;
+    border-radius: 50%;
+    background: #e2403b;
+}
+.offer {
+    color: #FFF;
+    position: relative;
+    width: 110px;
+    z-index: 9;
+    padding-top: 30px;
+    text-align: center;
+}
+.offer:after {
+    background: #e2403b;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 110px;
+    height: 110px;
+    content: "";
+    z-index: 7;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.offer-innr {
+    position: relative;
+    z-index: 10;
+}
+
+.cta-area h5 {
+  color: #fff;
+  margin: 5px 0;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.cta-area h1 { color: #38bfff; font-weight: 700; }
+
+.cta-area .button {
+  color: #313131;
+  margin-top: 50px;
+  background: #fdb902;
+}
+
+.button {
+    line-height: 52px;
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 18px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 1px 2px 2px rgba(0,0,0,.27);
+    -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,.27);
+    box-shadow: 1px 2px 2px rgba(0,0,0,.27);
 }
