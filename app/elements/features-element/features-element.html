@@ -1,0 +1,132 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="features-element">
+  <style>
+    .features-area-box-outer { position: relative; }
+    .features-area-box, .features-area-box:before, .features-area-box:after, .form-area-box, .form-area-box:before, .form-area-box:after {
+      background: #f2f2f2;
+    }
+    .features-area-box-outer:before, .features-area-box-outer:after, .single-pricing .top-outer:before, .single-pricing .top-outer:after, .form-area-box-outer:before, .form-area-box-outer:after {
+      background: #dedede;
+    }
+    .features-area-box {
+      padding: 45px 15px 0 15px;
+      margin-top: -40px;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 10;
+      border-radius: 6px;
+    }
+    .features-area-box:before {
+      position: absolute;
+      right: 0;
+      bottom: -25px;
+      width: 50.5%;
+      height: 40px;
+      content: "";
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+      z-index: 9;
+    }
+    .features-area-box:after {
+      position: absolute;
+      left: 0;
+      bottom: -25px;
+      width: 50.5%;
+      height: 40px;
+      content: "";
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg);
+      z-index: 9;
+    }
+    .features-area-box-outer:before {
+      position: absolute;
+      right: 0;
+      bottom: -45px;
+      width: 50.5%;
+      height: 60px;
+      content: "";
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+      -o-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+      z-index: 8;
+    }
+    .features-area-box-outer:after {
+      position: absolute;
+      left: 0;
+      bottom: -45px;
+      width: 50.5%;
+      height: 60px;
+      content: "";
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg);
+      z-index: 8;
+    }
+  </style>
+  <template>
+    <div class="features-area">
+			<div class="container">
+				<div class="features-area-box-outer">
+					<div class="features-area-box">
+						<div class="row text-center">
+							<div class="col-md-4 col-sm-6">
+								<div class="single-feature">
+									<img src="../../images/1.png" alt="features">
+									<h6>Assured Speed</h6>
+									<div class="fetu-line"></div>
+									<p>Redundant network connections at the backbone with 100 Mbit bandwidth enables rapid data transmission</p>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<div class="single-feature">
+									<img src="../../images/2.png" alt="features">
+									<h6>IDEAL PROTECTION</h6>
+									<div class="fetu-line"></div>
+									<p>Our advanced virtualization platforms and RAID protected hard drives ensure the highest data security</p>
+								</div>
+							</div>
+							<div class="col-sm-3"></div>
+							<div class="col-md-4 col-sm-6">
+								<div class="single-feature">
+									<img src="../../images/3.png" alt="features">
+									<h6>Advanced Storage</h6>
+									<div class="fetu-line"></div>
+									<p>Our VPS come with up to 12 GB of RAM and 400 GB hard disk space, providing capacity for a variety of applications</p>
+								</div>
+							</div>
+							<div class="col-sm-3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </template>
+  <script>
+  (function() {
+    Polymer({
+      is: 'features-element',
+    });
+  })();
+  </script>
+</dom-module>
