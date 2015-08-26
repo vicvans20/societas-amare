@@ -64,7 +64,7 @@
             <a data-route="home" href="/">Home</a>
             <a data-route="about" href="/about">About</a>
             <a data-route="team" href="/team">Team</a>
-            <a data-route="home" href="/#projects">Projects</a>
+            <a data-route="home" href="/projects">Projects</a>
             <a data-route="contact" href="/contact">Contact</a>
           </div>
 
@@ -75,11 +75,7 @@
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home" id="home-section">
-              <div>
-              </div>
-              <div id="projects" style="padding-left: 11%; padding-right: 5%;">
-                 <project-element></project-element>
-              </div>
+              <idea-element></idea-element>
             </section>
 
             <section data-route="about">
@@ -93,6 +89,10 @@
               <profile-vcard name="Alexander Gonzalez" image="images/team/alex.jpg" profession="Full Stack Ninja Developer" description="Programming since birth!"   place="Managua, Nicaragua"></profile-vcard>
             </section>
 
+            <section data-route="projects" style="padding-left: 11%; padding-right: 5%;">
+              <project-element></project-element>
+            </section>
+
             <section data-route="contact">
               <contact-element></contact-element>
             </section>
@@ -102,8 +102,14 @@
 
         </main>
 
-        <footer>
-          <h1>Foo</h1>
+        <footer class="footer-bar">
+    			<div class="container">
+		    		<div class="row text-center">
+    					<div class="col-md-12">
+						    <p>All rights reserved Copyright © 2015 Storm Tecnologies</a></p>
+				    	</div>
+		    		</div>
+    			</div>
         </footer>
 
       </paper-scroll-header-panel>

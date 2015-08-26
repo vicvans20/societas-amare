@@ -304,13 +304,6 @@ a {
 </style>
   <template>
   <div id='browser'>
-  <div id='browser-bar'>
-    <div class='circles'></div>
-    <div class='circles'></div>
-    <div class='circles'></div>
-    <p>Contact Us</p>
-    <span class='arrow entypo-resize-full'></span>
-  </div>
   <div id='content'>
     <div id='left'>
       <div id='map'>
@@ -392,26 +385,5 @@ a {
       is: 'contact-element',
     });
   })();
-  </script>
-  <script>
-//Inspired by a dribbble by Bluroon
-//https://dribbble.com/shots/1356864-Contact-Us
-
-//Capture the click event on a location
-$("#location-bar a").click(function(event){
-  event.preventDefault();
-
-  var $this = $(this),
-      $li = $this.parent(),
-      selectedMap = $this.attr("href"),
-      selectedLocation = $this.data('location');
-
-  $li.addClass('active').siblings('li').removeClass('active');
-
-  //Update #map bkimage with the image from the location
-  $('#map').css('background-image', 'url(' + selectedMap + ')');  
-  //update tooltip 'address'
-  $('.selectedLocation').text(selectedLocation);
-  });
   </script>
 </dom-module>
