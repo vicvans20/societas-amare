@@ -60,11 +60,11 @@
             </div>
           </div>
           <div class="app-menu">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/team">Team</a>
-            <a href="/projects">Projects</a>
-            <a href="/contact">Contact</a>
+            <a data-route="home" href="/">Home</a>
+            <a data-route="about" href="/about">About</a>
+            <a data-route="team" href="/team">Team</a>
+            <a data-route="home" href="/#projects">Projects</a>
+            <a data-route="contact" href="/contact">Contact</a>
           </div>
 
         </paper-toolbar>
@@ -75,6 +75,9 @@
 
             <section data-route="home" id="home-section">
               <div>
+              </div>
+              <div id="projects" style="padding-left: 11%; padding-right: 5%;">
+                 <project-element></project-element>
               </div>
             </section>
 
@@ -89,22 +92,17 @@
               <profile-vcard name="Alexander Gonzalez" image="images/team/alex.jpg" profession="Full Stack Ninja Developer" description="Programming since birth!"   place="Managua, Nicaragua"></profile-vcard>
             </section>
 
-            <section data-route="projects" style="padding-left: 11%; padding-right: 5%;">
-              <project-element></project-element>
-            </section>
-
             <section data-route="contact">
               <contact-element></contact-element>
             </section>
 
           </iron-pages>
 
-          <div class="arrow animated bounce">
 
         </main>
 
         <footer>
-          <h1>Hi, I'm a Fixed-Footer!</h1>
+          <h1>Foo</h1>
         </footer>
 
       </paper-scroll-header-panel>
