@@ -1,3 +1,5 @@
+Little project of a website.
+
 ## Prerequisites
 
 1. Node.js
@@ -5,9 +7,9 @@
 3. bower
 4. gulp
 
-## Intrucctions
+## Instructions
 
-- Clone de repo and in the root directory:
+- Clone de repo and at the root directory run:
 ```sh
 bower install
 ```
